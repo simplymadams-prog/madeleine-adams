@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --paper: #f5f1e8;
+  --ink: #24221e;
+  --muted: #706b62;
+  --accent: #9a3029;
+  --line: #d8d0c3;
+  --max: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", system-ui, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; }
+.site-header {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+}
+.name {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+nav { display: flex; gap: 24px; }
+nav a {
+  color: var(--muted);
+  font-size: .82rem;
+  text-decoration: none;
+}
+nav a:hover, .email:hover { color: var(--accent); }
+
+main { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+.hero {
+  min-height: 58vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 0 100px;
+}
+.kicker {
+  margin: 0 0 20px;
+  color: var(--accent);
+  font-size: .73rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+h1 {
+  max-width: 850px;
+  margin: 0;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(3.3rem, 8vw, 7.5rem);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+.intro {
+  max-width: 620px;
+  margin: 34px 0 0;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.55;
+}
+.section {
+  padding: 88px 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.section-heading { padding-right: 30px; }
+.writing-list { border-top: 1px solid var(--line); }
+.piece {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+.piece:hover .title { color: var(--accent); }
+.title {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.2rem;
+  transition: color .15s ease;
+}
+.publication {
+  color: var(--muted);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.about-copy {
+  max-width: 640px;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.85;
+}
+.email { color: var(--accent); }
+.site-footer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 30px 32px 50px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .76rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .site-header { padding: 22px 20px; }
+  main { padding: 0 20px; }
+  nav { gap: 14px; }
+  .hero { min-height: 62vh; padding: 70px 0; }
+  .section { grid-template-columns: 1fr; gap: 34px; padding: 64px 0; }
+  .piece { grid-template-columns: 1fr; gap: 7px; }
+  .site-footer { padding: 25px 20px 40px; }
+}
